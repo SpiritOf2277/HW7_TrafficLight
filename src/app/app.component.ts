@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TrafficLightComponent } from './traffic-light/traffic-light.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [TrafficLightComponent],
+  template: `
+    <app-traffic-light [initialState]="0"></app-traffic-light>
+  `,
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'HW7_TrafficLight';
-}
+export class AppComponent {}

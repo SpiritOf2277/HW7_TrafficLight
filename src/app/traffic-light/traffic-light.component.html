@@ -1,0 +1,14 @@
+<div class="traffic-light">
+    <div class="circle" [ngClass]="{'active': currentColor === 'green'}" style="background-color: green;">
+      <div class="arrow" *ngIf="showGreenArrow" style="background-color: green;"></div>
+    </div>
+    <div class="circle" [ngClass]="{'active': currentColor === 'yellow'}" style="background-color: yellow;"></div>
+    <div class="circle" [ngClass]="{'active': currentColor === 'red'}" style="background-color: red;">
+      <div class="arrow" *ngIf="showRedArrow" style="background-color: green;"></div>
+    </div>
+    <div class="circle" [ngClass]="{'active': currentColor === 'red-yellow'}" style="background-color: orange;">
+      <div class="arrow" *ngIf="showRedArrow" style="background-color: green;"></div>
+    </div>
+</div>
+<button (click)="nextState()">Следующий режим</button>
+  
